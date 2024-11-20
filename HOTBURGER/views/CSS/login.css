@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+/* Adicionando animação de fade-in */
+@keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    background-color: #0a0a0a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+    background: url('/images/background_cheeseburguer.jpg') no-repeat center center fixed;
+    background-size: cover;
+    animation: fade-in 1.1s ease-in-out; /* Aplicando a animação ao body */
+}
+
+body::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+    background-image: linear-gradient(to top, #000 50%, transparent);
+    z-index: -1;
+}
+
+.container {
+    width: 1000px;
+    height: 800px;
+    max-width: 600px;
+    max-height: 900px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 0 2px 20px rgba(255, 0, 0, 0.519);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    transition: 0.1s;
+}
+
+.container_2 {
+    padding: 50px;
+}
+
+.header header {
+    font-size: 150px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 10%;
+    font-weight: bold;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.label_email, .label_password {
+    color: #ddd;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-field input[type="email"],
+.input-field input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+.input-field input[type="email"]:hover,
+.input-field input[type="password"]:hover {
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 0 2px 20px rgba(255, 255, 255, 0.2);
+}
+
+.input-field input[type="email"]:focus,
+.input-field input[type="password"]:focus {
+    border: 2px solid #fff;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.802), 0 2px 20px rgba(255, 255, 255, 0.2);
+    transition: 0.3s;
+    transform: scale(1.05);
+    background-color: rgba(142, 20, 20, 0.3);
+}
+
+.input-field input[type="email"]::placeholder,
+.input-field input[type="password"]::placeholder {
+    color: #bbb;
+}
+
+.icon {
+    display: flex;
+    position: relative;
+    top: 27px;
+    left: 2%;
+    color: #dddddd;
+    font-size: 16px;
+}
+
+.remember-me-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.remember-me-checkbox {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.remember-me-checkbox:hover {
+    transform: scale(1.1);
+}
+
+.remember-me-checkbox:checked {
+    background-color: #ff0000;
+    border-color: #ff0000;
+    box-shadow: 0 4px 8px rgba(255, 0, 0, 0.598), 0 2px 20px rgba(255, 255, 255, 0.2);
+}
+
+.remember-me-checkbox:checked::before {
+    content: '✔';
+    display: block;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.submit {
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2), 0 2px 20px rgba(255, 255, 255, 0.2);
+}
+
+.submit:hover {
+    transition: 0.3s;
+    transform: scale(1.1);
+    border: #ccc 2px solid;
+    background-color: #d80000;
+}
+
+span a {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+    color: #ccc;
+    text-align: center;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+span a:hover {
+    color: #a12525;
+    transform: scale(1.0);
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.social-icon {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icon:hover {
+    border: 2px solid #fff;
+    background-color: #d80000;
+    transform: scale(1.1);
+}

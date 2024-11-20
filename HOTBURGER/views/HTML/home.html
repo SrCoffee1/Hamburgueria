@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="https://assets.codepen.io/27773162/vanilla-titlt.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+    <link rel="stylesheet" href="../CSS/nav.css">
+    <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/footer.css">
+
+
+</head>
+<body>
+
+
+<!-- NAVBAR -->
+
+    <header>
+        <button class="open-btn" id="menuBtn" onclick="openNavbar()"><i class="fa-solid fa-bars"></i></button>
+      
+        <div class="navbar" id="navbar">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeNavbar()">&times;</a>
+            <a href="#home" data-section="home"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="#menu" data-section="menu" onclick="openSubNavbar()"><i class="fas fa-utensils"></i> Cardápio</a>
+            <a href="#reservations" data-section="reservations"><i class="fas fa-regular fa-clipboard"></i> Reservas</a>
+            <a href="#feedback" data-section="feedback"><i class="fas fa-solid fa-star-half-stroke"></i> Avaliações</a>
+        
+            <div class="login-btn">
+              <a href="login.html" class="login-icon"><i class="fas fa-user-circle"></i></a>
+            </div>
+        
+          </div>
+      
+        <div class="sub-navbar" id="subNavbar">
+            <a href="javascript:void(0)" class="close-btn" onclick="closeSubNavbar()">&times;</a>
+            <a href="#burguers" data-section="team"><i class="fas fa-hamburger"></i> Hamburguers</a>
+            <a href="#combos" data-section="history"><i class="fas fa-solid fa-champagne-glasses"></i> Combos</a>
+            <a href="#drinks" data-section="mission"><i class="fas regular fa-wine-glass"></i> Bebidas</a>
+            <a href="#desserts" data-section="mission"><i class="fas fa-ice-cream"></i> Sobremesas</a>
+            <a href="#more" data-section="mission"><i class="fa-solid fa-spoon"></i> Adicionais</a>
+          </div>
+      </header>
+
+
+<!-- HOME -->
+
+
+<div class="background-content">
+<div class="content-container">
+    <div class="container_img">
+        <img src="/images/hamburguer 1.png" alt="Hot Burger">
+    </div>
+
+    <div class="container_text">
+        <h1 class="title">INICIO</h1>
+        <h2 class="title_2">Bem Vindo</h2>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Provident excepturi reprehenderit illum sint distinctio, perspiciatis officia aspernatur ducimus similique inventore sapiente iste cumque tenetur explicabo consequatur esse quasi eligendi! Quis.</p>
+    </div>
+</div>
+</div>
+
+<div class="social-container">
+    <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+</div>
+
+<div class="box_cardapio">
+    <button class="carda"><a href="../views/Cardapio.html"><i class="fas fa-chevron-right"></i> Ir para o Cardápio</a></button>
+</div>
+
+
+<!-- HORÁRIOS -->
+
+<div class="Schedules">
+    <h2>Horários de Funcionamento</h2>
+    <ul>
+        <li>Terca-feira: 11h às 22h</li>
+        <li>Quarta-feira: 11h às 22h</li>
+        <li>Quinta-feira: 11h às 22h</li>
+        <li>Sexta-feira: 11h às 22h</li>
+        <li>Sabado: 11h às 22h</li>
+</div>
+
+
+<!-- FOOTER -->
+
+<footer>
+    <div class="footer_info">
+        <div class="footer_width about">
+            <h2>Sobre</h2>
+            <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Bem-vindo à HOTBurguers, onde a paixão por hambúrgueres é nossa principal receita! Nossa história começou com o desejo de transformar o simples ato de comer em uma experiência memorável.</p>
+            <div class="social-media">
+                <ul>
+                    <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer_width link">
+            <h2>Links</h2>
+            <ul>
+                <li><a href="#" title="Go to Home">Inicio</a></li>
+                <li><a href="#" title="Learn more About us">Sobre</a></li>
+                <li><a href="#" title="Discover our Services">Serviços</a></li>
+                <li><a href="#" title="Frequently Asked Questions">FAQ</a></li>
+                <li><a href="#" title="Get in touch with us">Contato</a></li>
+            </ul>
+        </div>
+        <div class="footer_width contact">
+            <h2>Contato</h2>
+            <ul>
+                <li>
+                    <span><i class="fas fa-map-marker-alt"></i></span>
+                    <p>123 Street, New York, USA</p>
+                </li>
+                <li>
+                    <span><i class="fas fa-envelope"></i></span>
+                    <a href="mailto:user@gmail.com">user@gmail.com</a>
+                </li>
+                <li>
+                    <span><i class="fas fa-phone-volume"></i></span>
+                    <a href="tel:0000000000">000 0000 000</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="copy-right">
+        <p>&copy; COPYRIGHT 2023 ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+
+
+<!-- JS -->
+
+<script src="../JS/nav.js"></script>
+
+</body>
+</html>

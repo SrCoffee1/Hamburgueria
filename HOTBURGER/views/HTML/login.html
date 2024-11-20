@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <link rel="stylesheet" href="../CSS/login.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <div class="container_2">
+        <div class="header">
+            <header><i class="fa-solid fa-circle-user"></i></header>
+        </div>
+
+        <div class="input-container">
+            <div class="input-field">
+                <label class="label_email" for="user">Usuário</label>
+                <span class="icon"><i class="fas fa-user"></i></span>
+                <input type="email" name="username" id="user" required>  
+            </div>
+
+            <div class="input-field">
+                <label class="label_password" for="pass">Senha</label>
+                <span class="icon"><i class="fas fa-lock"></i></span>
+                <input type="password" name="password" id="pass" required>  
+            </div>
+
+            <label class="remember-me-label">
+                <input type="checkbox" class="remember-me-checkbox" name="remember-me" id="remember-me">
+                Lembrar-me
+            </label>            
+
+            <div class="input-field">
+                <input type="submit" class="submit"  name="submit" value="Entrar">  
+            </div>
+            <span><a href="#">Esqueceu a senha?</a></span>
+
+        </div>
+
+        <div class="social-container">
+            <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</body>
+</html>
