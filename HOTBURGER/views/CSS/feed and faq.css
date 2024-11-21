@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-bg: #000;
+    --box-bg: #0c0c0c;
+    --border-bg: #b30009 2px solid;
+    --text-color: #fff;
+    --hover-bg: #b30009;
+    --input-bg: #1a1a1a;
+    --button-bg: #b30009;
+    --button-hover-bg: #ff0000;
+    --transition: all 0.3s ease;
+}
+
+body {
+    background-color: var(--main-bg);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--hover-bg);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Feedback Section */
+.feedback-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: var(--box-bg);
+    border: var(--border-bg);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(179, 0, 9, 0.5);
+}
+
+.feedback-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.feedback-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.feedback-container input, .feedback-container textarea {
+    background-color: var(--input-bg);
+    color: var(--text-color);
+    border: var(--border-bg);
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.feedback-container button {
+    background-color: var(--button-bg);
+    color: var(--text-color);
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.feedback-container button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+/* FAQ Section */
+.faq-container {
+    width: 80%;
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: var(--box-bg);
+    border: var(--border-bg);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(179, 0, 9, 0.5);
+}
+
+.faq-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.faq-item {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    background-color: var(--input-bg);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-item:hover {
+    background-color: var(--hover-bg);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+}
+
+.faq-answer {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #ddd;
+    display: none;
+    transition: var(--transition);
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+/* Footer */
+footer {
+    margin-top: 30px;
+    text-align: center;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+footer a {
+    color: var(--hover-bg);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+footer a:hover {
+    color: var(--button-hover-bg);
+}
