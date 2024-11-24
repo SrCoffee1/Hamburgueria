@@ -10,6 +10,8 @@
     
     <link rel="stylesheet" href="../CSS/nav.css">
     <link rel="stylesheet" href="../CSS/home.css">
+    <link rel="stylesheet" href="../CSS/ex-feedbacks.css" />
+    <link rel="stylesheet" href="../CSS/cards.css">
     <link rel="stylesheet" href="../CSS/footer.css">
 
 
@@ -24,10 +26,10 @@
       
         <div class="navbar" id="navbar">
             <a href="javascript:void(0)" class="close-btn" onclick="closeNavbar()">&times;</a>
-            <a href="#home" data-section="home"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="../HTML/home.html" data-section="home"><i class="fa-solid fa-house"></i> Inicio</a>
             <a href="#menu" data-section="menu" onclick="openSubNavbar()"><i class="fas fa-utensils"></i> Cardápio</a>
-            <a href="#reservations" data-section="reservations"><i class="fas fa-regular fa-clipboard"></i> Reservas</a>
-            <a href="#feedback" data-section="feedback"><i class="fas fa-solid fa-star-half-stroke"></i> Avaliações</a>
+            <a href="../HTML/reservations.html" data-section="reservations"><i class="fas fa-regular fa-clipboard"></i> Reservas</a>
+            <a href="../HTML/feed and faq.html" data-section="feedback"><i class="fas fa-solid fa-star-half-stroke"></i> Avaliações</a>
         
             <div class="login-btn">
               <a href="login.html" class="login-icon"><i class="fas fa-user-circle"></i></a>
@@ -47,6 +49,13 @@
 
 
 <!-- HOME -->
+
+<div class="container_logo__one">
+  <img src="/HOTBURGER/images/new_logo.png" alt="logo">
+</div>
+
+
+<section class="teste">
 
 
 <div class="background-content">
@@ -85,6 +94,117 @@
         <li>Sexta-feira: 11h às 22h</li>
         <li>Sabado: 11h às 22h</li>
 </div>
+
+
+
+<!-- FEEDBACKS -->
+
+    <div class="container__feedback">
+      <div class="container__left">
+        <h1>Comentários</h1>
+        <p>
+          Mais de 200 clientes de diversos setores já confiaram na HOTBurguers para transformar seus momentos em experiências incríveis. Venha descobrir por que somos tão bem avaliados!
+      </p>
+      <p>
+          Suas palavras fazem toda a diferença! Deixe sua opinião e ajude-nos a continuar proporcionando momentos deliciosos e especiais para você e aos demais.
+      </p>
+      
+        <button><a href="../HTML/feed and faq.html">Dar um Feedback <i class="fa-solid fa-comment-dots"></i></a></button>
+      </div>
+      <div class="container__right">
+        <div class="card">
+          <img src="/HOTBURGER/images/pic-1.jpg" alt="user" />
+          <div class="card__content">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <div class="card__details">
+
+              <span class="container__left__stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+              
+              <p>
+                Simplesmente uma delicia! Voltarei aqui novamente com certeza.
+              </p>
+              <h4>- Romério Silva Leite</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/HOTBURGER/images/pic-2.jpeg" alt="user" />
+          <div class="card__content">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <div class="card__details">
+
+              <span class="container__left__stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+
+              <p>
+                A comida tava uma delícia, más perdi meu cachorro por lá.
+              </p>
+              <h4>- Marcia Ferreira</h4>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <img src="/HOTBURGER/images/pic-3.jpg" alt="user" />
+          <div class="card__content">
+            <span><i class="ri-double-quotes-l"></i></span>
+            <div class="card__details">
+
+              <span class="container__left__stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </span>
+
+              <p>
+                Achei um pouco exagerado ser tão preto, más a comida é muito boa.
+              </p>
+              <h4>- Steffane Almeida</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!-- CARDS -->
+
+<div class="card__box">
+  <div class="card__content__box">
+      <h2 class="card__icon"><i class="fa-solid fa-hand-sparkles"></i></h2>
+      <h3 class="card__title">Ambiente Limpo e Higienizado</h3>
+      <p class="card__p">"Cuidamos de cada cantinho com carinho e atenção para criar um ambiente limpo, higienizado e pronto para receber você. Sinta-se à vontade para desfrutar do nosso espaço com total segurança."</p>
+      </div>
+
+  <div class="card__content__box">
+      <h2 class="card__icon"><i class="fa-solid fa-cake-candles"></i></h2>
+      <h3 class="card__title">Faça a sua reserva</h3>
+      <p class="card__p">"Momentos especiais merecem planejamento. Reserve sua mesa conosco e prepare-se para saborear o melhor da nossa culinária em um ambiente perfeito para você e seus convidados."</p>
+  </div>
+
+  <div class="card__content__box">
+      <h2 class="card__icon"><i class="fa-solid fa-eye"></i></h2>
+      <h3 class="card__title">Sorria! Voce esta sendo filmado!</h3>
+      <p class="card__p">"Estamos de olho, mas só para garantir que tudo esteja em perfeita ordem. Sua segurança é o que mais importa para nós!"</p>
+  </div>
+</div>
+
+
+</section>
+
 
 
 <!-- FOOTER -->

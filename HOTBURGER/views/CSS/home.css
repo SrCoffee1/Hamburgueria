@@ -6,37 +6,37 @@
 }
 
 body {
-    background-color: #0e0e0e;
+    background: url('/HOTBURGER/images/background_cheeseburguer.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
     overflow-x: hidden; /* Prevents horizontal scroll */
-    transition: background 1s ease;
+    transition: background 1s ease; /* Adds smooth background transition */
 }
+
 
 body::after {
     content: '';
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 1.0;
-    background-image: linear-gradient(to top, rgb(0, 0, 0), transparent);
-    z-index: -1;
+    opacity: 0.9;
+    background-image: linear-gradient(to top, #000000 70%, transparent);
+    z-index: -2;
 }
 
-.logo {
-    font-size: 1.9rem;
-    font-weight: bold;
-    color: #fff;
-    letter-spacing: 0px;
-    cursor: pointer;
-    text-transform: uppercase;
-    transition: transform 0.3s ease;
+
+.container_logo__one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
 }
 
-.logo:hover {
-    transform: scale(1.1);
+.container_logo__one img {
+    width: 310px;
+    height: 150px;
 }
 
 
@@ -74,16 +74,16 @@ body::after {
 }
 
 .container_img img:focus {
-animation: treme 0.1s;
-animation-iteration-count: 3;
+    animation: treme 0.1s;
+    animation-iteration-count: 3;
 }
 
 @keyframes treme {
-0% {margin-left: 0;}
-25% {margin-left: 5px;}
-50% {margin-left: 0;}
-75% {margin-left: -5px;}
-100% {margin-left: 0;}
+    0% { margin-left: 0; }
+    25% { margin-left: 5px; }
+    50% { margin-left: 0; }
+    75% { margin-left: -5px; }
+    100% { margin-left: 0; }
 }
 
 /* Text Styling */
@@ -98,33 +98,30 @@ animation-iteration-count: 3;
     font-weight: bold;
     margin-bottom: 10px;
     text-transform: uppercase;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+    text-shadow: var(--glow-bg);
+    color: var(--tittle-color);
 }
 
 .title_2 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    color: #ff5c5c;
+    color: var(--button-1-color);
 }
 
 .description {
     font-size: 1.3rem;
     line-height: 1.6;
-    margin: 0px;
-    color: rgba(255, 255, 255, 0.8);
+    margin: 0;
+    color: var(--text-color);
 }
 
 /* Social Media Icons Section */
 .social-container {
     display: flex;
-    justify-content: center; /* Centraliza horizontalmente os ícones */
+    justify-content: center;
     gap: 20px;
-    right: 50%;
-    top: 90px; /* Reduzido para aproximar da seção acima */
     margin-top: 30px;
-    
 }
-
 
 .social-icon {
     text-decoration: none;
@@ -135,64 +132,61 @@ animation-iteration-count: 3;
     height: 70px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: var(--stars);
     font-size: 30px;
     transition: background-color 0.3s, transform 0.3s;
 }
 
 .social-icon:hover {
-    background-color: rgba(255, 255, 255, 0.3); /* Altera a cor de fundo ao passar o mouse */
-    transform: scale(1.1); /* Aumenta o ícone ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
 }
 
 /* Estilização do Botão Cardápio */
 .box_cardapio {
-display: flex;
-justify-content: center; /* Centraliza o botão horizontalmente */
-margin-top: 40px; /* Espaçamento superior entre o conteúdo */
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
 }
 
 .carda {
-width: 280px; /* Largura do botão */
-height: 60px; /* Altura do botão */
-background: linear-gradient(145deg, #0c0c0c, #080000); /* Gradiente para o fundo do botão */
-border: #a30000 2px solid;
-border-radius: 50px; /* Bordas arredondadas */
-cursor: pointer;
-font-size: 1.0rem;
-font-weight: bold;
-text-transform: uppercase;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: background 0.4s ease, transform 0.2s ease; /* Efeito de transição */
+    width: 280px;
+    height: 60px;
+    background: linear-gradient(145deg, #0c0c0c, #080000);
+    border: var(--border-bg);
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.4s ease, transform 0.2s ease;
+    color: #fff;
 }
 
 .carda a {
-text-decoration: none; /* Remove o sublinhado */
-color: white; /* Cor do texto */
-display: flex;
-align-items: center; /* Alinha verticalmente o texto e o ícone */
-justify-content: center; /* Alinha horizontalmente */
-width: 100%;
-height: 100%;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
 }
 
 .carda i {
-margin-right: 20px; /* Espaço entre o ícone e o texto */
-font-size: 1.4rem; /* Tamanho do ícone */
-transition: transform 0.3s ease; /* Animação suave para o ícone */
+    margin-right: 20px;
+    font-size: 1.4rem;
+    transition: transform 0.3s ease;
 }
 
-/* Efeito ao passar o mouse (hover) */
 .carda:hover {
-background: linear-gradient(145deg, #0c0c0c, #ff0000); /* Cor do fundo do botão ao passar o mouse */
-transform: scale(1.01); /* Aumento suave do botão */
-transition: transform 0.3s ease; /* Animação suave para o ícone */
-
+    background: linear-gradient(145deg, var(--button-1-color), var(--button-2-color));
+    transform: scale(1.01);
 }
 
 .carda:hover i {
-transition: transform 0.3s ease; /* Animação suave para o ícone */
-transform: translateX(5px); /* Movimento suave do ícone para a direita */
+    transform: translateX(5px);
 }

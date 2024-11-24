@@ -1,0 +1,129 @@
+/* Definição das variáveis de cores */
+:root {
+    --primary-color: #ff5733;  /* Vermelho vibrante */
+    --secondary-color: #000000; /* Preto para fundo */
+    --text-color: #ffffff;  /* Texto branco */
+    --hover-bg-color: rgba(255, 87, 51, 0.1);  /* Cor de fundo ao passar o mouse */
+    --border-color: #ff5733;  /* Borda vermelha vibrante */
+    --shadow-color: rgba(0, 0, 0, 0.4);  /* Sombra suave */
+    --card-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);  /* Sombra forte nas cards */
+}
+
+/* Reset básico */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: var(--secondary-color); /* Fundo preto */
+    color: var(--text-color); /* Texto branco */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-direction: column;
+    padding: 0 2rem;
+}
+
+/* Container principal de horários */
+.container__horarios {
+    max-width: 900px;
+    width: 100%;
+    margin: 2rem;
+    padding: 2rem;
+    background-color: var(--secondary-color); /* Preto */
+    border-radius: 15px;
+    box-shadow: var(--card-shadow);
+    text-align: center;
+    overflow: hidden;
+    border: 2px solid var(--border-color); /* Borda vermelha */
+}
+
+/* Título */
+.container__horarios h1 {
+    font-size: 2.8rem;
+    color: var(--primary-color); /* Vermelho */
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Parágrafo de descrição */
+.container__horarios p {
+    font-size: 1.2rem;
+    color: var(--text-color); /* Texto branco */
+    margin-bottom: 2rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Lista de horários */
+.horarios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-top: 1.5rem;
+}
+
+/* Estilo individual para cada "dia" */
+.dia {
+    padding: 1.5rem;
+    background-color: #1a1a1a; /* Fundo escuro para as cards */
+    border: 2px solid var(--border-color); /* Borda vermelha */
+    border-radius: 10px;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Nome do dia */
+.dia__nome {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-color); /* Vermelho */
+    margin-bottom: 0.5rem;
+}
+
+/* Horário */
+.dia__hora {
+    font-size: 1.2rem;
+    color: var(--text-color); /* Texto branco */
+}
+
+/* Efeito de hover nas cards */
+.dia:hover {
+    transform: translateY(-5px);
+    background-color: var(--hover-bg-color); /* Efeito de fundo ao passar o mouse */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+    .horarios {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Animação de entrada da página */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplica animação de fade-in no container */
+.container__horarios {
+    animation: fadeIn 0.8s ease-in-out;
+}
