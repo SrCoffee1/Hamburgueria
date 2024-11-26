@@ -1,0 +1,25 @@
+.static_Img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+    
+    .static_Img img {
+        width: 50%;
+        height: 24%;
+        z-index: -3;
+    }
+
+    .static_img1 {
+        position: absolute;
+        top: 3%;
+        left: 3.9%;
+        right: 0;
+        bottom: 0;
+        overflow: hidden;
+        width: 900px;
+        transform: rotate(-15deg)
+    }

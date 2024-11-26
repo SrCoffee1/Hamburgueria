@@ -10,7 +10,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #111111;
+    background-color: #0e0e0e;
     box-shadow: 0 0 40px rgba(0, 0, 0, 0.795);
     overflow-x: hidden;
     padding-top: 60px;
@@ -32,7 +32,7 @@
 }
 
 .navbar a:hover {
-  background-color: #181818;
+  background-color: #360000;
   scale: 1.02;
   border-radius: 5px;
   box-shadow: 0 0 40px rgb(26, 8, 8);
@@ -57,7 +57,7 @@
     position: fixed;
     top: 0;
     left: 250px;
-    background-color: #1f0808;
+    background-color: #110000;
     overflow-x: hidden;
     padding-top: 60px;
     transition: 0.5s;
@@ -74,7 +74,7 @@
 }
 
 .sub-navbar a:hover {
-    background-color: #5c0000;
+    background-color: #700000;
 }
 
 .sub-navbar a.active {

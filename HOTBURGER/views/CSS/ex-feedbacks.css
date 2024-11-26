@@ -17,11 +17,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-body {
   font-family: "Poppins", sans-serif;
-  background-color: #0c0c0c;
 }
 
 .container__feedback {
@@ -69,6 +65,7 @@ body {
   font-size: 1.1rem;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  z-index: 2;
 }
 
 .container__left button a {
@@ -78,6 +75,7 @@ body {
   color: inherit; /* Faz o link herdar a cor do botão */
   text-decoration: none; /* Remove o sublinhado do link */
   font-size: inherit; /* Garante que o tamanho da fonte será o mesmo */
+  z-index: 2;
 }
 
 .container__left button:hover {
@@ -130,6 +128,7 @@ body {
   box-shadow: 5px 5px 20px rgba(70, 70, 70, 0.2);
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  z-index: 2;
 }
 
 .card:hover {

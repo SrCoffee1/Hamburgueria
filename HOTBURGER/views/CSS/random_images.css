@@ -1,0 +1,15 @@
+.boxImg {
+    position: fixed; /* Fixa no fundo, independente do conteúdo */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5; /* Sempre atrás do conteúdo principal */
+    overflow: hidden;
+}
+
+.boxImg img {
+    position: absolute;
+    will-change: transform, top, left, width, height;
+    transition: all 1s ease-in-out;
+}
