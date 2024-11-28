@@ -73,57 +73,39 @@
 
 <!-- HOME -->
 
-<header>
-  <a href="#"><img src="" alt="" class="logo"></a>
-  <nav class="navegation">
-    <ul>
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Products</a></li>
-      <li><a href="#">Newsletter</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
-
-<section class="carousel">
-  <div class="carousel-item active" data-bg="bg1">
-    <div class="circle"></div>
-    <div class="content">
-      <div class="text">
-        <h2><br><span><i class="fa-brands fa-gripfire"></i>HOT</span>Burguers</h2>
-        <p>Bem-vindo à <strong><i class="fa-brands fa-gripfire"></i>HOTBurguers</strong>, onde a paixão por hambúrgueres se encontra com o sabor irresistível! Criamos um cardápio diversificado, pensado para agradar a todos os gostos, oferecendo ingredientes frescos, combinações únicas e sabores marcantes. Seja para um almoço rápido ou um jantar saboroso, nossos hambúrgueres são preparados com cuidado e qualidade, para proporcionar uma experiência gastronômica incrível!</p>
-        <div class="view-contact">
-          <a href="#">VIEW ALL PRODUCTS</a>
-          <ul class="icons">
-            <li><a href="tel:0000000000"><i class="fa-solid fa-phone"></i>  000 0000 000</a></li>
+<section>
+  <div class="circle"></div>
+  <header>
+      <a href="#"><img src="" alt="" class="logo"></a>
+      <nav class="navegation">
+          <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Products</a></li>
+              <li><a href="#">Newsletter</a></li>
+              <li><a href="#">Contact</a></li>
           </ul>
-        </div>
+      </nav>
+  </header>
+  <div class="content">
+    <div class="text">
+      <h2><br><span><i class="fa-brands fa-gripfire"></i>HOT</span>Burguers</h2>
+      <p>Bem-vindo à <strong><i class="fa-brands fa-gripfire"></i>HOTBurguers</strong>, onde a paixão por hambúrgueres se encontra com o sabor irresistível! Criamos um cardápio diversificado, pensado para agradar a todos os gostos, oferecendo ingredientes frescos, combinações únicas e sabores marcantes. Seja para um almoço rápido ou um jantar saboroso, nossos hambúrgueres são preparados com cuidado e qualidade, para proporcionar uma experiência gastronômica incrível!</p>
+      <div class="view-contact">
+        <a href="#">VIEW ALL PRODUCTS</a>
+        <ul class="icons">
+            <a href="tel:0000000000"><i class="fa-solid fa-phone"></i>  000 0000 000</a>
+          </li>
+        </ul>
       </div>
     </div>
-    <div class="barguer">
-      <img src="/HOTBURGER/images/hamburguer 1 back__red.png" alt="Hambúrguer 1">
-    </div>
   </div>
-
   
-  <!-- HOME_2 -->
-  <div class="carousel-item" data-bg="bg2">
-    <div class="content_2">
-      <div class="text_2">
-        <h2><br><span><i class="fa-brands fa-gripfire"></i>HOT</span>Burguers</h2>
-        <p>Bem-vindo à <strong><i class="fa-brands fa-gripfire"></i>HOTBurguers</strong>, onde a paixão por hambúrgueres se encontra com o sabor irresistível! Criamos um cardápio diversificado, pensado para agradar a todos os gostos, oferecendo ingredientes frescos, combinações únicas e sabores marcantes. Seja para um almoço rápido ou um jantar saboroso, nossos hambúrgueres são preparados com cuidado e qualidade, para proporcionar uma experiência gastronômica incrível!</p>
-        <div class="view-contact_2">
-          <a href="#">VIEW ALL PRODUCTS</a>
-          <ul class="icons_2">
-            <li><a href="tel:0000000000"><i class="fa-solid fa-phone"></i>  000 0000 000</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <div class="barguer_2">
-      <img src="/HOTBURGER/images/oferta__glow.png" alt="Hambúrguer 2">
-    </div>
+  </ul>
+  
+  <div class="barguer">
+    <img src="/HOTBURGER/images/hamburguer 1 back__red.png" alt="">
   </div>
+
 </section>
 
 
@@ -309,48 +291,6 @@
 
 <script src="../JS/nav.js"></script>
 <script src="../JS/random_images.js"></script>
-
-<script>
-
-const carouselItems = document.querySelectorAll('.carousel-item');
-const carousel = document.querySelector('.carousel');
-let currentIndex = 0;
-
-function updateBackground() {
-  // Obtém o valor do atributo `data-bg` do item ativo
-  const newBg = carouselItems[currentIndex].getAttribute('data-bg');
-  // Remove as classes de fundo anteriores
-  carousel.className = `carousel ${newBg}`;
-}
-
-function showNextItem() {
-  // Remove a classe 'active' do item atual
-  carouselItems[currentIndex].classList.remove('active');
-  carouselItems[currentIndex].classList.add('previous');
-
-  // Incrementa o índice, voltando ao início se necessário
-  currentIndex = (currentIndex + 1) % carouselItems.length;
-
-  // Adiciona a classe ativa ao próximo item
-  carouselItems[currentIndex].classList.add('active');
-
-  // Atualiza o fundo do carrossel
-  updateBackground();
-
-  // Remove a classe 'previous' após a transição
-  setTimeout(() => {
-    carouselItems.forEach((item) => item.classList.remove('previous'));
-  }, 1000);
-}
-
-// Alterna para o próximo item a cada 5 segundos
-setInterval(showNextItem, 5000);
-
-// Inicializa o fundo ao carregar a página
-updateBackground();
-
-
-</script>
 
 </body>
 </html>

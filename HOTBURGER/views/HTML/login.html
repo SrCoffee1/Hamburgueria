@@ -20,35 +20,45 @@
         </div>
 
         <div class="input-container">
+            <!-- Campos de login -->
             <div class="input-field">
-                <label class="label_email" for="user">Usuário</label>
-                <span class="icon"><i class="fas fa-user"></i></span>
-                <input type="email" name="username" id="user" required>  
+                <label class="label_email" for="user">Email</label>
+                <input type="email" name="email" onchange="validateFields()" id="email" required>
+                <div class="email-error">Preencha o campo de email!</div>
+                <div class="email-error">Email inválido!</div>
             </div>
-
+        
             <div class="input-field">
                 <label class="label_password" for="pass">Senha</label>
-                <span class="icon"><i class="fas fa-lock"></i></span>
-                <input type="password" name="password" id="pass" required>  
+                <input type="password" name="password" id="password" onchange="validateFields()" required>
+                <div class="password-error">Preencha o campo de senha!</div>
+                <div class="password-error">Senha inválido!</div>
             </div>
-
-            <label class="remember-me-label">
-                <input type="checkbox" class="remember-me-checkbox" name="remember-me" id="remember-me">
-                Lembrar-me
-            </label>            
+        
 
             <div class="input-field">
-                <input type="submit" class="submit"  name="submit" value="Entrar">  
+                <button type="button" class="clear" id="recover-password-button" disabled = "true">Recuperar senha</button>
             </div>
-            <span><a href="#">Esqueceu a senha?</a></span>
-
-        </div>
-
+        
+               <!-- Botão de login -->
+            <div class="input-field">
+                <button type="button" class="solid" id="login-button" disabled = "true">Entrar</button>
+            </div>
+        
+            
+                <button type="button" class="outline" id="register-button" disabled>
+                    <a href="cadastro.html">Registrar</a>
+                </button>
+            
+        
         <div class="social-container">
             <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
             <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
         </div>
     </div>
+
+    <script src="/HOTBURGER/views/JS/login.js">
+    </script>
 </body>
 </html>
