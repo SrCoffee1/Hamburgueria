@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva de Mesa</title>
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/reservation.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+        <a href="home.html" class="back-btn">
+            <span class="material-icons">arrow_back</span>
+        </a>
+        <div class="container">
+        <div class="reservation-form">
+            <h2 class="form-title"><i class="fa-solid fa-pen-nib"></i> Faça a sua reserva aqui!</h2>
+
+            <div class="input-group">
+                <label for="name"><i class="fa-solid fa-signature"></i> Nome</label>
+                <input type="text" id="name" placeholder="Seu nome" required>
+            </div>
+
+            <div class="input-group">
+                <label for="date"><i class="fa-regular fa-calendar-days"></i> Data</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <div class="input-group">
+                <label for="time"><i class="fa-regular fa-clock"></i> Horário</label>
+                <input type="time" id="time" required>
+            </div>
+
+            <div class="input-group">
+                <label for="guests"><i class="fa-solid fa-user-group"></i> Número de Pessoas</label>
+                <input type="number" id="guests" min="1" max="20" required>
+            </div>
+
+            <button class="submit-btn" onclick="submitReservation()">Reservar</button>
+        </div>
+
+        <div class="animation-area">
+            <div class="icon">
+                <span class="material-icons">fastfood</span>
+            </div>
+            <div class="icon">
+                <span class="material-icons">calendar_today</span>
+            </div>
+            <div class="icon">
+                <span class="material-icons">group</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="/HOTBURGER/public/javascripts/reservation.js"></script>
+</body>
+</html>

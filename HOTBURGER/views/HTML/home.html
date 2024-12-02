@@ -8,15 +8,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
     
-    <link rel="stylesheet" href="../CSS/nav.css">
-    <link rel="stylesheet" href="../CSS/random_images.css">
-    <link rel="stylesheet" href="../CSS/static_img.css">
-    <link rel="stylesheet" href="../CSS/home.css">
-    <link rel="stylesheet" href="../CSS/home_2.css">
-    <link rel="stylesheet" href="../CSS/schedules.css" />
-    <link rel="stylesheet" href="../CSS/ex-feedbacks.css" />
-    <link rel="stylesheet" href="../CSS/cards.css">
-    <link rel="stylesheet" href="../CSS/footer.css">
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/style.css">
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/nav.css">
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/random_images.css">
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/static_img.css">
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/home.css">
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/menu.css">
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/food.css">
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/schedules.css" />
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/ex-feedbacks.css" />
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/cards.css">
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/footer.css">
 
 
 </head>
@@ -30,10 +32,10 @@
       
         <div class="navbar" id="navbar">
             <a href="javascript:void(0)" class="close-btn" onclick="closeNavbar()">&times;</a>
-            <a href="../HTML/home.html" data-section="home"><i class="fa-solid fa-house"></i> Inicio</a>
+            <a href="home.html" data-section="home"><i class="fa-solid fa-house"></i> Inicio</a>
             <a href="#menu" data-section="menu" onclick="openSubNavbar()"><i class="fas fa-utensils"></i> Cardápio</a>
-            <a href="../HTML/reservations.html" data-section="reservations"><i class="fas fa-regular fa-clipboard"></i> Reservas</a>
-            <a href="../HTML/feed and faq.html" data-section="feedback"><i class="fas fa-solid fa-star-half-stroke"></i> Avaliações</a>
+            <a href="reservation.html" data-section="reservations"><i class="fas fa-regular fa-clipboard"></i> Reservas</a>
+            <a href="feed and faq.html" data-section="feedback"><i class="fas fa-solid fa-star-half-stroke"></i> Avaliações</a>
         
             <div class="login-btn">
               <a href="login.html" class="login-icon"><i class="fas fa-user-circle"></i></a>
@@ -56,18 +58,18 @@
 
 
 <div class="boxImg">
-  <img src="/HOTBURGER/images/burger__black__border__white.png" alt="" class="img1">
-  <img src="/HOTBURGER/images/burger__black__border__red.png" alt="" class="img2">
-  <img src="/HOTBURGER/images/burguer__red__border__white.png" alt="" class="img3">
-  <img src="/HOTBURGER/images/burger__black__border__white.png" alt="" class="img4">
-  <img src="/HOTBURGER/images/burguer__red__border__white.png" alt="" class="img5">
-  <img src="/HOTBURGER/images/burger__white__border__black.png" alt="" class="img6">
-  <img src="/HOTBURGER/images/burger__black__border__red.png" alt="" class="img7">
-  <img src="/HOTBURGER/images/burger__black__border__white.png" alt="" class="img8">
-  <img src="/HOTBURGER/images/burger__black__border__gold.png" alt="" class="img9">
-  <img src="/HOTBURGER/images/burger__black__border__red.png" alt="" class="img10">
-  <img src="/HOTBURGER/images/burger__white__border__black.png" alt="" class="img11">
-  <img src="/HOTBURGER/images/burger__white__border__red.png" alt="" class="im12">
+  <img src="/HOTBURGER/public/images/burger__black__border__white.png" alt="" class="img1">
+  <img src="/HOTBURGER/public/images/burger__black__border__red.png" alt="" class="img2">
+  <img src="/HOTBURGER/public/images/burguer__red__border__white.png" alt="" class="img3">
+  <img src="/HOTBURGER/public/images/burger__black__border__white.png" alt="" class="img4">
+  <img src="/HOTBURGER/public/images/burguer__red__border__white.png" alt="" class="img5">
+  <img src="/HOTBURGER/public/images/burger__white__border__black.png" alt="" class="img6">
+  <img src="/HOTBURGER/public/images/burger__black__border__red.png" alt="" class="img7">
+  <img src="/HOTBURGER/public/images/burger__black__border__white.png" alt="" class="img8">
+  <img src="/HOTBURGER/public/images/burger__black__border__gold.png" alt="" class="img9">
+  <img src="/HOTBURGER/public/images/burger__black__border__red.png" alt="" class="img10">
+  <img src="/HOTBURGER/public/images/burger__white__border__black.png" alt="" class="img11">
+  <img src="/HOTBURGER/public/images/burger__white__border__red.png" alt="" class="im12">
 </div>
 
 
@@ -76,13 +78,10 @@
 <section>
   <div class="circle"></div>
   <header>
-      <a href="#"><img src="" alt="" class="logo"></a>
-      <nav class="navegation">
+      <a href="#"><span class="HOT"><i class="fa-brands fa-gripfire"></i>HOT</span><h1 class="BURGERS">BURGERS</h1></a>
+      <nav class="social__nav">
           <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Newsletter</a></li>
-              <li><a href="#">Contact</a></li>
+              <li><a href="login.html"><i class="fa-regular fa-circle-user"></i></a></li>
           </ul>
       </nav>
   </header>
@@ -91,9 +90,7 @@
       <h2><br><span><i class="fa-brands fa-gripfire"></i>HOT</span>Burguers</h2>
       <p>Bem-vindo à <strong><i class="fa-brands fa-gripfire"></i>HOTBurguers</strong>, onde a paixão por hambúrgueres se encontra com o sabor irresistível! Criamos um cardápio diversificado, pensado para agradar a todos os gostos, oferecendo ingredientes frescos, combinações únicas e sabores marcantes. Seja para um almoço rápido ou um jantar saboroso, nossos hambúrgueres são preparados com cuidado e qualidade, para proporcionar uma experiência gastronômica incrível!</p>
       <div class="view-contact">
-        <a href="#">VIEW ALL PRODUCTS</a>
-        <ul class="icons">
-            <a href="tel:0000000000"><i class="fa-solid fa-phone"></i>  000 0000 000</a>
+        <a href="#">Navegar <i class="fa-solid fa-chevron-down"></i></a>
           </li>
         </ul>
       </div>
@@ -103,12 +100,115 @@
   </ul>
   
   <div class="barguer">
-    <img src="/HOTBURGER/images/hamburguer 1 back__red.png" alt="">
+    <img src="/HOTBURGER/public/images/hamburguer 1 back__red.png" alt="">
   </div>
 
 </section>
 
 
+<!-- CARROSEL MENU -->
+
+
+<section class="carousel_menu">
+  <h1 class="category_title_menu"><i class="fas fa-solid fa-burger"></i>Hambúrgueres</h1>
+  <div class="carousel_container_menu">
+      
+      <div class="box_food">
+          <h2 class="title_food">Classic Cheese</h2>
+          <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+          <p class="description_food">O clássico que nunca sai de moda! Um hambúrguer simples e irresistível, perfeito para quem ama os sabores tradicionais.
+              Carne 100% bovina, queijo cheddar derretido, alface americana, tomate fresco, picles crocante e molho especial.
+          </p>
+          <img src="/HOTBURGER/public/images/Classic Cheese.png" alt="Classic Cheese" class="product_food">
+      </div>
+
+
+      <div class="box_food">
+          <h2 class="title_food">Whopper BBQ</h2>
+          <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+          <p class="description_food">O Whopper que você já ama, agora com um toque defumado irresistível.
+              Carne bovina grelhada no fogo, queijo cheddar derretido, fatias de bacon crocante, cebola crispy, alface fresca, tomate maduro e um toque especial de molho barbecue defumado, tudo envolvido em um pão macio com gergelim.
+          </p>
+          <img src="/HOTBURGER/public/images/Whopper_BBQ.png" alt="Whopper-BBQ" class="product_food">
+      </div>
+
+
+      <div class="box_food">
+          <h2 class="title_food">Stacker Duplo Bacon</h2>
+          <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+          <p class="description_food">Para os amantes de bacon em dobro! O Stacker Duplo Bacon traz dois hambúrgueres 100% bovinos suculentos, queijo cheddar derretido, fatias generosas de bacon crocante, molho especial e pão macio tostado na medida certa. Uma explosão de sabor em cada mordida!</p>
+          <img src="/HOTBURGER/public/images/Stacker-DP.png" alt="Stacker Duplo Bacon" class="product_food">
+      </div>
+      
+
+      <div class="box_food">
+          <h2 class="title_food">Mega Stacker Atômico 2.0</h2>
+          <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+          <p class="description_food">
+              Uma evolução do sabor! O Mega Stacker Atômico 2.0 traz ainda mais potência: dois hambúrgueres 100% bovinos suculentos, queijo cheddar em dobro, bacon crocante, cebola crispy, alface americana, molho atômico especial e um toque final de jalapeños para os amantes de um sabor explosivo e picante.
+          </p>                                    
+          <img src="/HOTBURGER/public/images/Mega-Stacker-Atômico-2.0.png" alt="Mega Stacker Atômico 2.0" class="product_food">
+      </div>
+      
+
+      <div class="box_food">
+          <h2 class="title_food">Mega Stacker Atômico 3.0</h2>
+          <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+          <p class="description_food">Potência máxima em sabor! O Mega Stacker Atômico 3.0 é uma verdadeira explosão de sabor!
+              Três camadas generosas de carne bovina grelhada no fogo, tripla porção de queijo cheddar derretido, fatias de bacon crocante, cebola crispy e o exclusivo molho Stacker com pimenta jalapeño, tudo envolvido em um pão macio com gergelim.
+          </p>
+          <img src="/HOTBURGER/public/images/Mega Stacker Atômico 3.0.png" alt="Mega Stacker Atômico 3.0" class="product_food">
+      </div>
+
+
+      <div class="box_food">
+          <h2 class="title_food">Whopper Bacon Catupiry</h2>
+          <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+          <p class="description_food">O clássico Whopper com o toque cremoso do Catupiry e o crocante do bacon. Sabor inconfundível!
+              Carne bovina grelhada, queijo cheddar, bacon crocante, alface, tomate e o irresistível Catupiry cremoso, tudo no pão com gergelim.
+          </p>
+          <img src="/HOTBURGER/public/images/whopper_catupiry_interna.png" alt="Whopper Bacon Catupiry" class="product_food">
+      </div>
+
+
+      <div class="box_food">
+          <h2 class="title_food">Chicken Júnior</h2>
+          <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+          <p class="description_food">O sabor do frango crocante em uma versão mais leve e deliciosa.
+              Frango empanado crocante, alface fresca, tomate e maionese, tudo no pão macio.
+          </p>
+          <img src="/HOTBURGER/public/images/Chicken-Jr.png" alt="Chicken Júnior" class="product_food">
+      </div>
+
+
+      <div class="box_food">
+          <h2 class="title_food">Rodeio</h2>
+          <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+          <p class="description_food">O sabor que remete ao espírito do campo! O Rodeio combina um hambúrguer 100% bovino suculento, queijo cheddar cremoso, cebola crispy crocante, molho barbecue defumado e pão levemente tostado. Simples, rústico e irresistível!</p>
+          <img src="/HOTBURGER/public/images/Rodeio.png" alt="Rodeio" class="product_food">
+      </div>
+
+      
+      <div class="box_food">
+          <h2 class="title_food">Kids Burger</h2>
+          <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+          <p class="description_food">O lanche perfeito para os pequenos! O Kids Burger traz um hambúrguer 100% bovino, queijo cheddar derretido, ketchup e pão macio, em um tamanho ideal para crianças. Simples, delicioso e cheio de diversão!</p>
+          <img src="/HOTBURGER/public/images/Kids-Burger.png" alt="Kids Burger" class="product_food">
+      </div>
+
+      
+      <div class="box_food">
+          <h2 class="title_food">Whopper Vegetariano</h2>
+          <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+          <p class="description_food">Uma opção vegetariana deliciosa, com todo o sabor e frescor do Whopper! 
+              Hambúrguer de vegetais, queijo cheddar, alface, tomate, picles e maionese, tudo no pão com gergelim.
+          </p>
+          <img src="/HOTBURGER/public/images/Whopper-de-Plantas.png" alt="Whopper Vegetariano" class="product_food">
+      </div>
+
+      
+  </div>
+</section>
 
 
 <!-- HORÁRIOS -->
@@ -144,7 +244,7 @@
       </div>
       <div class="container__right">
         <div class="card">
-          <img src="/HOTBURGER/images/pic-1.jpg" alt="user" />
+          <img src="/HOTBURGER/public/images/pic-1.jpg" alt="user" />
           <div class="card__content">
             <span><i class="ri-double-quotes-l"></i></span>
             <div class="card__details">
@@ -165,7 +265,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="/HOTBURGER/images/pic-2.jpeg" alt="user" />
+          <img src="/HOTBURGER/public/images/pic-2.jpeg" alt="user" />
           <div class="card__content">
             <span><i class="ri-double-quotes-l"></i></span>
             <div class="card__details">
@@ -186,7 +286,7 @@
           </div>
         </div>
         <div class="card">
-          <img src="/HOTBURGER/images/pic-3.jpg" alt="user" />
+          <img src="/HOTBURGER/public/images/pic-3.jpg" alt="user" />
           <div class="card__content">
             <span><i class="ri-double-quotes-l"></i></span>
             <div class="card__details">
@@ -289,8 +389,15 @@
 
 <!-- JS -->
 
-<script src="../JS/nav.js"></script>
-<script src="../JS/random_images.js"></script>
+<script src="/HOTBURGER/public/javascripts/3D.js"></script>
+<script src="/HOTBURGER/public/javascripts/menu.js"></script>
+
+<script src="/HOTBURGER/public/javascripts/nav.js"></script>
+<script src="/HOTBURGER/public/javascripts/random_images.js"></script>
+
+<script src="/HOTBURGER/public/javascripts/firebase.js"></script>
+<script type="module" src="/HOTBURGER/public/javascripts/authState.js"></script>
+
 
 </body>
 </html>

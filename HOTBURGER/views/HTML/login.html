@@ -6,59 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-
-    <link rel="stylesheet" href="../CSS/login.css">
-
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/login.css">
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/account.css">
 </head>
-<body>
+<body class="centralize">
 
-    <div class="container">
-        <div class="container_2">
-        <div class="header">
-            <header><i class="fa-solid fa-circle-user"></i></header>
+<!-- adminburguer@hotburguers.br     opaitaon -->
+
+    <form>
+        <div class="form-field">
+            <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com">
+            <div class="error" id="email-required-error">Email é obrigatório!</div>
+            <div class="error" id="email-invalid-error">Email inválido!</div>
         </div>
-
-        <div class="input-container">
-            <!-- Campos de login -->
-            <div class="input-field">
-                <label class="label_email" for="user">Email</label>
-                <input type="email" name="email" onchange="validateFields()" id="email" required>
-                <div class="email-error">Preencha o campo de email!</div>
-                <div class="email-error">Email inválido!</div>
-            </div>
-        
-            <div class="input-field">
-                <label class="label_password" for="pass">Senha</label>
-                <input type="password" name="password" id="password" onchange="validateFields()" required>
-                <div class="password-error">Preencha o campo de senha!</div>
-                <div class="password-error">Senha inválido!</div>
-            </div>
-        
-
-            <div class="input-field">
-                <button type="button" class="clear" id="recover-password-button" disabled = "true">Recuperar senha</button>
-            </div>
-        
-               <!-- Botão de login -->
-            <div class="input-field">
-                <button type="button" class="solid" id="login-button" disabled = "true">Entrar</button>
-            </div>
-        
-            
-                <button type="button" class="outline" id="register-button" disabled>
-                    <a href="cadastro.html">Registrar</a>
-                </button>
-            
-        
-        <div class="social-container">
-            <a href="#" class="social-icon"><i class="fab fa-google"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
-            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+        <div class="form-field">
+            <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="Senha">
+            <div class="error" id="password-required-error">Senha é obrigatória!</div>
+            <div class="error" id="password-min-length-error">A senha deve ter pelo menos 6 caracteres!</div>
         </div>
-    </div>
+        <div>
+            <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
+        </div>
+        <div>
+            <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
+        </div>
+        <div>
+            <button type="button" class="outline" onclick="register()">Registrar</button>
+        </div>
+    </form>
 
-    <script src="/HOTBURGER/views/JS/login.js">
+    <script src="/HOTBURGER/public/javascripts/login.js"></script>
+    <script src="/HOTBURGER/public/javascripts/validations.js"></script>
+    <script src="/HOTBURGER/public/javascripts/loading.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/11.0.2/firebase-auth-compat.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyBcIrxM4paoy84owwOtiK-mL2wckGaw2Ds",
+            authDomain: "hotburguers-724c7.firebaseapp.com",
+            projectId: "hotburguers-724c7",
+            storageBucket: "hotburguers-724c7.firebasestorage.app",
+            messagingSenderId: "987898064446",
+            appId: "1:987898064446:web:9b857f6c928861228aab6f",
+            measurementId: "G-HZFNY5FE29"
+        };
+        firebase.initializeApp(firebaseConfig);
     </script>
 </body>
 </html>

@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-bg: #000;
+  --box-bg: #0c0c0c;
+  --border-bg : #b30009 5px solid;
+  --box-shadow-bg: 0 0 40px hsla(0, 100%, 27%, 0.847);
+  --name-color: #f8f8f8;
+  --card-bg-text: #ffffff;
+
+  --transition: all 0.5s ease;
+}
+
+.white:root{
+  --main-bg: #f8f8f8;
+  --box-bg: #ffffff;
+  --name-color: #bdbdbd;
+  --card-bg-text: #343434;
+}
+
+  
+  .container_food {
+    max-width: 1200px;
+    padding: 40px 0 ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    flex-wrap: wrap;
+    position: relative;
+    transition: var(--transition);
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  .box_food{
+    width: 300px;
+    height: 400px;
+    border-radius: 30px;
+    position: relative;
+    background-color: var(--box-bg);
+    border: var(--border-bg);
+    transform-style: preserve-3d;
+    transition: var(--transition);
+
+  }
+
+  .box_food:hover{
+    width: 800px;
+    box-shadow: var(--box-shadow-bg);
+  }
+  
+  .box_food::before {
+    content: "HOT";
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: var(--card-bg-text);
+    font-size: 6rem;
+    font-weight: 900;
+    font-style: italic;
+    opacity: 0;
+    transform: var(--transition);
+  }
+  
+  .box_food::after {
+    content: "BURGUER";
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: var(--card-bg-text);
+    font-size: 4.5em;
+    font-weight: 900;
+    font-style: italic;
+    opacity: 0;
+    transition: var(--transition);
+  }
+  
+  .box_food:hover::before,
+  .box_food:hover::after {
+    opacity: 0.05;
+  }
+  
+  .title_food {
+    position: absolute;
+    top: 0%;
+    text-align: center;
+    width: 100%;
+    color: var(--name-color);
+    transition: var(--transition);
+    transform: translateZ(75px);
+    opacity: 0;
+  }
+  
+  .box_food:hover .title_food {
+    right: 30%;
+    top: 40px;
+    opacity: 1;
+  }
+  
+  .buy_food{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    padding: 10px 25px;
+    background-color: var(--bgColor);
+    color: var(--name-color);
+    font-size: 1rem;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    transition: var(--transition);
+    transform: translateZ(75px);
+    opacity: 0;
+  }
+  
+  .box_food:hover .buy_food{
+    width: 160px;
+    left: 70%;
+    bottom: 30px;
+    opacity: 1;
+  }
+  
+  .circle_food{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid #ff000d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--bgColor);
+    transition: var(--transition);
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 0.5;
+  }
+
+    .box_food:hover .circle_food{
+    box-shadow: 0 0 40px hsla(0, 100%, 46%, 0.952);
+    left: 20%;
+    transform: translate3d(-50%, -50%, 40px);
+    opacity: 0.7;
+}
+  
+  .product_food {
+    max-width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transition: var(--transition);
+    transform: translate3d(-50%, -50%, 0);
+    filter: drop-shadow(0 0 5px #000000);
+}
+
+.box_food:hover .product_food{
+    transform: translate3d(-50%, -50%, 100px) rotateZ(-360deg);
+    filter: drop-shadow(0 0 10px #000000);
+    left: 19.5%;
+  }
+
+  .description_food{
+    color: #e9e9e9;
+    position: absolute;
+    top: 60%;
+    font-size: 13px;
+    text-align: center;
+    width: 100%;
+    color: var(--name-color);
+    transition: var(--transition);
+    transform: translateZ(75px);
+    opacity: 0;
+  }
+
+  .box_food:hover .description_food {
+    width: 400px;
+    left: 43%;
+    top: 40%;
+    opacity: 1;
+  }
+
+.mode-switch{
+    fill: white;
+    stroke: white;
+    stroke-width: 0.5px;
+    cursor: pointer;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.mode-switch:active{
+    fill: #333;
+    stroke: #333;
+}
