@@ -14,25 +14,31 @@
 <!-- adminburguer@hotburguers.br     opaitaon -->
 
     <form>
-        <div class="form-field">
+        <fieldset class="form-field">
+            <legend class="sr-only">Email</legend>
             <input type="email" name="email" id="email" onchange="onChangeEmail()" placeholder="seu@email.com">
-            <div class="error" id="email-required-error">Email é obrigatório!</div>
-            <div class="error" id="email-invalid-error">Email inválido!</div>
-        </div>
-        <div class="form-field">
+            <p class="error" id="email-required-error">Email é obrigatório!</p>
+            <p class="error" id="email-invalid-error">Email inválido!</p>
+        </fieldset>
+        
+        <fieldset class="form-field">
+            <legend class="sr-only">Senha</legend>
             <input type="password" name="password" id="password" onchange="onChangePassword()" placeholder="Senha">
-            <div class="error" id="password-required-error">Senha é obrigatória!</div>
-            <div class="error" id="password-min-length-error">A senha deve ter pelo menos 6 caracteres!</div>
-        </div>
-        <div>
+            <p class="error" id="password-required-error">Senha é obrigatória!</p>
+            <p class="error" id="password-min-length-error">A senha deve ter pelo menos 6 caracteres!</p>
+        </fieldset>
+        
+        <section>
             <button type="button" class="clear" id="recover-password-button" disabled="true">Recuperar senha</button>
-        </div>
-        <div>
+        </section>
+        
+        <section>
             <button type="button" class="solid" id="login-button" disabled="true" onclick="login()">Entrar</button>
-        </div>
-        <div>
+        </section>
+        
+        <section>
             <button type="button" class="outline" onclick="register()">Registrar</button>
-        </div>
+        </section>
     </form>
 
     <script src="/HOTBURGER/public/javascripts/login.js"></script>

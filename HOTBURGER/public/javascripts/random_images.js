@@ -23,5 +23,4 @@ function randomizeImages() {
     });
 }
 
-// Chamando a função periodicamente para movimentar as imagens
-setInterval(randomizeImages, 5000); // A cada 5 segundos
+setInterval(randomizeImages, 5000);

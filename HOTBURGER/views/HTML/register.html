@@ -9,26 +9,33 @@
 </head>
 <body class="centralize">
     <form>
-        <div class="form-field">
+        <fieldset class="form-field">
+            <legend class="sr-only"></legend>
             <input type="email" placeholder="seu@email.com"
                 onchange="onChangeEmail()" id="email">
-            <div class="error" id="email-required-error">Email é obrigatório!</div>
-            <div class="error" id="email-invalid-error">Email inválido!</div>
-        </div>
-        <div class="form-field">
+            <p class="error" id="email-required-error">Email é obrigatório!</p>
+            <p class="error" id="email-invalid-error">Email inválido!</p>
+        </fieldset>
+
+        <fieldset class="form-field">
+            <legend class="sr-only"></legend>
             <input type="password" placeholder="Senha" onchange="onChangePassword()" id="password">
-            <div class="error" id="password-required-error">Senha é obrigatória!</div>
-        </div>
-        <div class="form-field">
+            <p class="error" id="password-required-error">Senha é obrigatória!</p>
+        </fieldset>
+
+        <fieldset class="form-field">
+            <legend class="sr-only"></legend>
             <input type="password" placeholder="Confirme sua Senha" onchange="onChangeConfirmPassword()" id="confirmPassword">
-            <div class="error" id="password-doesnt-match-error">Senha e confirmação devem ser iguais!</div>
-        </div>
-        <div>
+            <p class="error" id="password-doesnt-match-error">Senha e confirmação devem ser iguais!</p>
+        </fieldset>
+
+        <section>
             <button type="button" class="solid" disabled="true" onclick="register()" id="register-button">Registrar</button>
-        </div>
-        <div>
+        </section>
+        
+        <section>
             <button type="button" class="clear" onclick="login()">Entrar</button>
-        </div>
+        </section>
     </form>
 </body>
 

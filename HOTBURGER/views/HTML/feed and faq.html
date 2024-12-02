@@ -6,73 +6,59 @@
     <title>HOTBurguers - Feedback e FAQ</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-
-    
     <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/nav.css">
     <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/feed and faq.css">
-
-
 </head>
 <body>
-
     <!-- NAVBAR -->
-
     <header>
         <button class="open-btn" id="menuBtn" onclick="openNavbar()"><i class="fa-solid fa-bars"></i></button>
-      
-        <div class="navbar" id="navbar">
+        <nav class="navbar" id="navbar">
             <a href="javascript:void(0)" class="close-btn" onclick="closeNavbar()">&times;</a>
             <a href="home.html" data-section="home"><i class="fa-solid fa-house"></i> Inicio</a>
             <a href="#menu" data-section="menu" onclick="openSubNavbar()"><i class="fas fa-utensils"></i> Cardápio</a>
             <a href="reservation.html" data-section="reservations"><i class="fas fa-regular fa-clipboard"></i> Reservas</a>
             <a href="feed and faq.html" data-section="feedback"><i class="fas fa-solid fa-star-half-stroke"></i> Avaliações</a>
-        
-            <div class="login-btn">
-              <a href="login.html" class="login-icon"><i class="fas fa-user-circle"></i></a>
-            </div>
-        
-          </div>
-      
-        <div class="sub-navbar" id="subNavbar">
+            <section class="login-btn">
+                <a href="login.html" class="login-icon"><i class="fas fa-user-circle"></i></a>
+            </section>
+        </nav>
+        <aside class="sub-navbar" id="subNavbar">
             <a href="javascript:void(0)" class="close-btn" onclick="closeSubNavbar()">&times;</a>
             <a href="#burguers" data-section="team"><i class="fas fa-hamburger"></i> Hamburguers</a>
             <a href="#combos" data-section="history"><i class="fas fa-solid fa-champagne-glasses"></i> Combos</a>
             <a href="#drinks" data-section="mission"><i class="fas regular fa-wine-glass"></i> Bebidas</a>
             <a href="#desserts" data-section="mission"><i class="fas fa-ice-cream"></i> Sobremesas</a>
             <a href="#more" data-section="mission"><i class="fa-solid fa-spoon"></i> Adicionais</a>
-          </div>
-      </header>
-
+        </aside>
+    </header>
 
     <!-- Feedback Section -->
-    <div class="feedback-container">
+    <section class="feedback-container">
         <h2>Deixe seu Feedback</h2>
         <form>
             <input type="text" name="nome" placeholder="Seu Nome" required>
             <textarea name="mensagem" rows="5" placeholder="Escreva seu feedback..." required></textarea>
             <button type="submit">Enviar Feedback</button>
         </form>
-    </div>
+    </section>
 
     <!-- FAQ Section -->
-    <div class="faq-container">
+    <section class="faq-container">
         <h2>Perguntas Frequentes (FAQ)</h2>
-
-        <div class="faq-item">
+        <article class="faq-item">
             <h3>1. Quais são os horários de funcionamento?</h3>
             <p class="faq-answer">Estamos abertos todos os dias das 10h às 22h.</p>
-        </div>
-
-        <div class="faq-item">
+        </article>
+        <article class="faq-item">
             <h3>2. Vocês oferecem opções vegetarianas?</h3>
             <p class="faq-answer">Sim, temos hambúrgueres vegetarianos feitos com ingredientes frescos.</p>
-        </div>
-
-        <div class="faq-item">
+        </article>
+        <article class="faq-item">
             <h3>3. Como faço um pedido online?</h3>
             <p class="faq-answer">Acesse nosso site e clique na opção "Peça Online" para iniciar seu pedido.</p>
-        </div>
-    </div>
+        </article>
+    </section>
 
     <footer>
         © 2024 HOTBurguers | Feito com ♥ por <a href="#">Sua Empresa</a>
@@ -86,8 +72,6 @@
             });
         });
     </script>
-
     <script src="/HOTBURGER/public/javascripts/nav.js"></script>
-
 </body>
 </html>
