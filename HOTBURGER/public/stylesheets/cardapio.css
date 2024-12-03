@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #1b1b1b;
+}
+
+.category_title_menu {
+    margin: 0 auto;
+    position: relative;
+    color: #fff;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: #a30000;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-shadow: 2px 2px #ff0000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: #ef0000 6px solid;
+    margin-bottom: 20px;
+}
+
+/* Estilo adicional para o título */
+.category_title_menu h1 {
+    margin: 0;
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+
+.category_title_menu i {
+    font-size: 1.5rem;
+    line-height: 1.2;
+}
+
+.carousel_menu {
+    margin: 20px auto;
+    width: 70%;
+    height: 350%;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    background-color: #340000;
+    border: #d80000 10px solid;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    margin-bottom: 10%;
+    margin-bottom: 30px;
+}
+
+.carousel_container_menu {
+    display: flex;
+    gap: 20px;;
+    width: 263%;
+    animation: scroll 20s linear infinite;
+    background-color: #490000;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.box_food {
+    height: 380px;
+    background-color: #1c1c1c;
+    border: 2px solid #d80000;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.box_food:hover {
+    z-index: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 10px rgb(255, 0, 0);}
+
+.buy_food {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #d80000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.buy_food:hover {
+    background-color: #b30009;
+}
+
+.description_food {
+    margin-top: -10px;
+    padding: 10px;
+    font-size: 12px;
+    color: #ccc;
+}
+
+.product_food {
+    max-width: 150px;
+    margin: 20px auto;
+    display: block;
+}
+
+.carousel_container_menu:hover {
+    animation-play-state: paused;
+}
+
+/* Estilos para telas pequenas (dispositivos móveis) */
+@media (max-width: 768px) {
+    .box_food {
+        min-width: 80%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .carousel_container_menu {
+        gap: 15px;
+        padding: 10px;
+    }
+
+    .product_food {
+        max-width: 80px;
+        margin: 0 auto;
+    }
+
+    .description_food {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .buy_food {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        margin-top: 10px;
+    }
+
+    .category_title_menu {
+        font-size: 1.2rem;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .carousel {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+    }
+}
+
+/* Estilos para telas médias (tablets e laptops menores) */
+@media (min-width: 769px) and (max-width: 1200px) {
+    .box_food {
+        min-width: 45%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    .carousel_container_menu {
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .product_food {
+        max-width: 120px;
+        margin: 0 auto;
+    }
+
+    .description_food {
+        font-size: 14px;
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    .buy_food {
+        font-size: 1rem;
+        padding: 10px 20px;
+        margin-top: 12px;
+    }
+
+    .category_title_menu {
+        font-size: 1.5rem;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .carousel {
+        width: 90%;
+        padding: 15px;
+        border-radius: 15px;
+    }
+}
+
+/* Estilos para telas grandes (monitores de desktop) */
+@media (min-width: 1201px) {
+    .box_food {
+        min-width: 280px;
+        height: 380px;
+    }
+
+    .carousel_container_menu {
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .product_food {
+        max-width: 150px;
+    }
+
+    .description_food {
+        font-size: 16px;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    .buy_food {
+        font-size: 1.2rem;
+        padding: 12px 24px;
+        margin-top: 15px;
+    }
+
+    .category_title_menu {
+        font-size: 2rem;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .carousel {
+        width: 70%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+}

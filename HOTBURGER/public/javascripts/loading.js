@@ -1,3 +1,5 @@
+// Funções de carregamento
+
 function showLoading() {
     const div = document.createElement('div'); 
     div.classList.add("loading", "centralize");

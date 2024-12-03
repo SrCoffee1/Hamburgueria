@@ -16,7 +16,7 @@
         <nav class="navbar" id="navbar">
             <a href="javascript:void(0)" class="close-btn" onclick="closeNavbar()">&times;</a>
             <a href="home.html" data-section="home"><i class="fa-solid fa-house"></i> Inicio</a>
-            <a href="#menu" data-section="menu" onclick="openSubNavbar()"><i class="fas fa-utensils"></i> Cardápio</a>
+            <a href="cardapio.html" data-section="menu" onclick="openSubNavbar()"><i class="fas fa-utensils"></i> Cardápio</a>
             <a href="reservation.html" data-section="reservations"><i class="fas fa-regular fa-clipboard"></i> Reservas</a>
             <a href="feed and faq.html" data-section="feedback"><i class="fas fa-solid fa-star-half-stroke"></i> Avaliações</a>
             <section class="login-btn">
@@ -73,5 +73,25 @@
         });
     </script>
     <script src="/HOTBURGER/public/javascripts/nav.js"></script>
+
+    <script>
+        // feed_and_faq.js
+async function submitFeedback(event) {
+    event.preventDefault();
+    
+    const feedbackData = {
+        name: document.getElementById("user-name").value,
+        message: document.getElementById("feedback-message").value
+    };
+
+    // Enviar dados para o Firebase ou banco de dados
+    await submitFeedbackToDatabase(feedbackData);
+    
+    // Redirecionar para a página de agradecimento ou feed
+    alert("Feedback enviado com sucesso!");
+    window.location.href = "thank_you.html";  // Redireciona para página de agradecimento
+}
+
+    </script>
 </body>
 </html>

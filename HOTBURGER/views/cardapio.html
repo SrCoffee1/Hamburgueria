@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini cardápio</title>
+    <title>Menu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/menu.css">
+    <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/cardapio.css">
     <link rel="stylesheet" href="/HOTBURGER/public/stylesheets/food.css">
 </head>
 <body>
     <!-- Categoria: Hambúrgueres -->
     <section class="carousel_menu">
-        <h1 class="category_title_menu"><i class="fas fa-solid fa-burger"></i>Hambúrgueres</h1>
+        <h1 class="category_title_menu"><i class="fas fa-solid fa-burger"></i> Hambúrgueres</h1>
         <section class="carousel_container_menu">
             
             <article class="box_food">
@@ -101,8 +101,112 @@
 
         </section>
     </section>
-    
+
+     <!-- Categoria: Combos -->
+     <section class="carousel_menu">
+        <h1 class="category_title_menu"><i class="fas fa-box"></i> Combos</h1>
+        <section class="carousel_container_menu">
+            <article class="box_food">
+                <h2 class="title_food">Combo Classic Cheese</h2>
+                <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+                <p class="description_food">Inclui Classic Cheese, batatas fritas e uma bebida à escolha. A combinação perfeita!</p>
+                <img src="/HOTBURGER/public/images/Combo-Classic-Cheese.png" alt="Combo Classic Cheese" class="product_food">
+            </article>
+
+            <article class="box_food">
+                <h2 class="title_food">Combo Whopper BBQ</h2>
+                <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+                <p class="description_food">Inclui Whopper BBQ, anéis de cebola e uma bebida à escolha. Um combo com sabor defumado!</p>
+                <img src="/HOTBURGER/public/images/Combo-Whopper-BBQ.png" alt="Combo Whopper BBQ" class="product_food">
+            </article>
+        </section>
+    </section>
+
+    <!-- Categoria: Bebidas -->
+    <section class="carousel_menu">
+        <h1 class="category_title_menu"><i class="fas fa-glass-martini"></i> Bebidas</h1>
+        <section class="carousel_container_menu">
+            <article class="box_food">
+                <h2 class="title_food">Refrigerante</h2>
+                <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+                <p class="description_food">Escolha entre Coca-Cola, Pepsi, Fanta, ou Sprite. Geladinha, como deve ser!</p>
+                <img src="/HOTBURGER/public/images/Refrigerante.png" alt="Refrigerante" class="product_food">
+            </article>
+
+            <article class="box_food">
+                <h2 class="title_food">Milkshake</h2>
+                <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+                <p class="description_food">Disponível nos sabores chocolate, morango, baunilha e Oreo. Cremoso e irresistível!</p>
+                <img src="/HOTBURGER/public/images/Milkshake.png" alt="Milkshake" class="product_food">
+            </article>
+        </section>
+    </section>
+
+    <!-- Categoria: Sobremesas -->
+    <section class="carousel_menu">
+        <h1 class="category_title_menu"><i class="fas fa-ice-cream"></i> Sobremesas</h1>
+        <section class="carousel_container_menu">
+            <article class="box_food">
+                <h2 class="title_food">Sundae</h2>
+                <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+                <p class="description_food">Escolha entre calda de chocolate, morango ou caramelo. Um clássico!</p>
+                <img src="/HOTBURGER/public/images/Sundae.png" alt="Sundae" class="product_food">
+            </article>
+
+            <article class="box_food">
+                <h2 class="title_food">Torta de Maçã</h2>
+                <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+                <p class="description_food">Uma sobremesa quentinha com recheio cremoso e crosta dourada. Irresistível!</p>
+                <img src="/HOTBURGER/public/images/Torta-de-Maca.png" alt="Torta de Maçã" class="product_food">
+            </article>
+        </section>
+    </section>
+
+    <!-- Categoria: Adicionais -->
+    <section class="carousel_menu">
+        <h1 class="category_title_menu"><i class="fas fa-plus-circle"></i> Adicionais</h1>
+        <section class="carousel_container_menu">
+            <article class="box_food">
+                <h2 class="title_food">Batata Frita</h2>
+                <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+                <p class="description_food">Batatas fritas crocantes, perfeitas para acompanhar qualquer refeição.</p>
+                <img src="/HOTBURGER/public/images/Batata-Frita.png" alt="Batata Frita" class="product_food">
+            </article>
+
+            <article class="box_food">
+                <h2 class="title_food">Anéis de Cebola</h2>
+                <button class="buy_food" style="--bgColor: #d80000">Buy Now</button>
+                <p class="description_food">Anéis de cebola empanados e crocantes, um adicional irresistível!</p>
+                <img src="/HOTBURGER/public/images/Aneis-de-Cebola.png" alt="Anéis de Cebola" class="product_food">
+            </article>
+        </section>
+    </section>
+
     <script src="/HOTBURGER/public/javascripts/3D.js"></script>
     <script src="/HOTBURGER/public/javascripts/menu.js"></script>
+    <script>
+        // cardapio.html
+import { getDocs, collection } from 'firebase/firestore';
+
+// Carregar pratos do Firebase
+async function loadMenu() {
+    const menuSnapshot = await getDocs(collection(db, "dishes"));
+    const menuData = menuSnapshot.docs.map(doc => doc.data());
+    const menuContainer = document.getElementById("menu-container");
+
+    menuData.forEach(dish => {
+        const dishElement = document.createElement("div");
+        dishElement.innerHTML = `
+            <h3>${dish.name}</h3>
+            <p>${dish.price}</p>
+            <img src="${dish.image}" alt="${dish.name}">
+        `;
+        menuContainer.appendChild(dishElement);
+    });
+}
+
+loadMenu();  // Chama a função para carregar o cardápio
+
+    </script>
 </body>
 </html>

@@ -54,5 +54,25 @@
     </main>
 
     <script src="/HOTBURGER/public/javascripts/reservation.js"></script>
+    <script>
+        // reservation.js
+async function makeReservation(event) {
+    event.preventDefault();
+    
+    const reservationData = {
+        name: document.getElementById("customer-name").value,
+        date: document.getElementById("reservation-date").value,
+        time: document.getElementById("reservation-time").value
+    };
+
+    // Enviar dados de reserva para o Firebase ou banco de dados
+    await createReservation(reservationData);
+    
+    // Redirecionar para a página de confirmação ou feed de reservas
+    alert("Reserva feita com sucesso!");
+    window.location.href = "reservation_confirmation.html";  // Redireciona para página de confirmação
+}
+
+    </script>
 </body>
 </html>
